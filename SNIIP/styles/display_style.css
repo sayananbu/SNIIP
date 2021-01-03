@@ -11,10 +11,10 @@ body{
 	//background-color: rgba(255, 255, 0, .1);
 	display: flex;
 	margin: 0 auto;
-	width: 1400px;
+	width: 1200px;
 	max-width: 2000px;
 	height: 100vh;
-	min-height: 100vh;
+	max-height: 150vh;
 	flex-direction: column;
 }
 .title{
@@ -25,6 +25,7 @@ body{
 	font-weight: bold;
 }
 .header{
+	position: relative;
 	z-index: 1000;
 	width: 100%;
 	height: 10vh;
@@ -302,6 +303,12 @@ body{
     	color: black;
     	padding-left: 10px;
     	margin-top: -32px;
+    }
+    .green_hex{
+    	background-color: green;
+    }
+    .blue_hex{
+    	background-color: #03f;
     }
 
 				
