@@ -87,7 +87,7 @@ body{
 .inner_circle{
 	padding-top: 20px;
 	border: 10px solid red;
-	//transform: rotate(10deg);
+	transform: rotate(20deg);
 	overflow: auto;
 	z-index: 4;
 	position: absolute;
@@ -96,7 +96,7 @@ body{
 	height: 450px;
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(150, 0, 0, .7);
+	background-color:#64110b;
 	border-radius: 50%;
 	flex-direction: column;
 	box-sizing: content-box;
@@ -203,9 +203,9 @@ body{
 /* ===================================== */
 /* Hexagons */
 .hex {
-    width:28px;
-    height:18px;
-    background-color: #fff;
+    width:30px;
+    height:17.2px;
+    background-color: #961311;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: auto 173px;
@@ -253,8 +253,8 @@ body{
 
     .hex .corner-1:before,
     .hex .corner-2:before {
-        width: 173px;
-        height: 173px;
+      width: 173px;
+      height: 173px;
       content: '';
       position: absolute;
       background: inherit;
@@ -263,11 +263,11 @@ body{
       z-index: 1;
       background: inherit;
       background-repeat:no-repeat;
-        backface-visibility: hidden;
+       backface-visibility: hidden;
     }            
 
     .hex .corner-1:before {
-        transform: rotate(-60deg) translate(-87px, 0px);
+        transform: rotate(-60deg) translate(-86px, 0px);
       transform-origin: 0 0;
     }            
 
@@ -282,8 +282,6 @@ body{
     }
 
     
-    }
-
     .hex.hex-1 {
         background: green;
     }
@@ -305,10 +303,10 @@ body{
     	margin-top: -32px;
     }
     .green_hex{
-    	background-color: green;
+    	background-color: #06be5f;
     }
     .blue_hex{
-    	background-color: #03f;
+    	background-color: #388ea7;
     }
 
 				
