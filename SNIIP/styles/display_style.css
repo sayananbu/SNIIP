@@ -3,7 +3,7 @@ body{
 	font-family: monospace;
 	text-decoration: none;
 	font-size: 17px;
-	background-color: #888;
+	background-color: #333;
 	color: orange;
 	font-family: "Roboto", sans-serif;
 }
@@ -80,7 +80,7 @@ body{
 	align-items: center;
 	width: 750px;
 	height: 750px;
-	background-color: rgba(0, 0, 255, .2);
+	background-color: #2555b6;
 	border-radius: 50%;
 	box-sizing: border-box;
 }
@@ -92,8 +92,8 @@ body{
 	z-index: 4;
 	position: absolute;
 	display: flex;
-	width: 450px;
-	height: 450px;
+	width: 550px;
+	height: 550px;
 	align-items: center;
 	justify-content: center;
 	background-color:#64110b;
@@ -203,15 +203,15 @@ body{
 /* ===================================== */
 /* Hexagons */
 .hex {
-    width:30px;
-    height:17.2px;
+    width:40px;
+    height:23px;
     background-color: #961311;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: auto 173px;
     position: relative;
     float:left;
-    margin:25px 5px;
+    margin:27px 6px;
     text-align:center;
     zoom:1;
 }
@@ -299,7 +299,7 @@ body{
     }
     .row_chet{
     	color: black;
-    	padding-left: 10px;
+    	padding-left: 6px;
     	margin-top: -32px;
     }
     .green_hex{
