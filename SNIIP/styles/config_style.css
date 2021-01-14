@@ -348,8 +348,12 @@ body{
 	border-radius: 15px;
 	border-color: black;
 	width: 100%;
+	
 }
 .upper_text{
 	font-size: 20px;
 	font-family: cursive;
 }
+/* .conf_left{
+	float: left;
+} */
