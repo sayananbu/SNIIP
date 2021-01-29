@@ -91,7 +91,7 @@ body{
 .inner_circle{
 	padding-top: 20px;
 	border: 10px solid red;
-	//transform: rotate(20deg);
+	transform: rotate(20deg);
 	overflow: auto;
 	z-index: 4;
 	position: absolute;
