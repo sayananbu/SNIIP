@@ -91,7 +91,7 @@ body{
 .inner_circle{
 	padding-top: 20px;
 	border: 10px solid red;
-	transform: rotate(20deg);
+	//transform: rotate(20deg);
 	overflow: auto;
 	z-index: 4;
 	position: absolute;
@@ -177,7 +177,7 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items:center;
-	background-color: #333;
+	background-color: red;
 	border-radius: 50%;
 	border: 10px solid #000;
 }
@@ -307,14 +307,16 @@ body{
     	padding-left: 6px;
     	margin-top: -32px;
     }
-     /* .green_hex{
+      .green_hex{
     	background-color: #06be5f;
-    } */
-    /*
+    	color: black;
+    } 
+    
     .blue_hex{
     	background-color: #388ea7;
+    	color: black;
     }
- */
+ 
  .label{
  	font-weight: bold;
  	font-size: 23px;
@@ -348,14 +350,30 @@ body{
 	border-radius: 15px;
 	border-color: black;
 	width: 100%;
-	
 }
 .upper_text{
 	font-size: 20px;
 	font-family: cursive;
 }
 
-#btnHex{
-	width: 100px;
+.opened{
+    	transform: rotate(90deg);
+    	background-color: green;
+    }
+.butt{
+	width: 200px;
 	height: 50px;
+	font-size: 25px;
+	font-weight: bold;
 }
+.conf_container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+.center{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	}

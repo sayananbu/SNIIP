@@ -175,7 +175,7 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items:center;
-	background-color: #333;
+	background-color: red;
 	border-radius: 50%;
 	border: 10px solid #000;
 }
@@ -308,6 +308,14 @@ body{
     .blue_hex{
     	background-color: #388ea7;
     }
+    .red_hex{
+    	background-color: #961311;
+    }
+.opened{
+    	transform: rotate(90deg);
+    	background-color: green;
+    }
+    
 
 				
 				

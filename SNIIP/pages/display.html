@@ -531,19 +531,20 @@
 <script src="../js/jquery-ui.min.js"></script>
 <script src="../js/code.js"></script>
 <script>
+	jQuery(document).ready(function(){
 			getData();
+			getDataShluz();
 			setInterval(getData, 5000);
+			setInterval(getDataShluz, 7000);
 
-			function getData(){
+			});
+function getData(){
 			$.ajax({
 			    type: 'GET',
 			    url: '../js/bd.php',
 			    dataType: "json",
 			    success: function(data){
-			    	
-			    	// for( var i in data){
-			    	// 	console.log(data[i].status);
-			    	// }
+
 			    	for(var i in data){
 			    		switch(data[i].status){
 			    			case 'active':
@@ -560,6 +561,26 @@
 			    			$(`#h${data[i].index}`).removeClass('blue_hex');
 			    			$(`#h${data[i].index}`).removeClass('green_hex');
 			    			$(`#h${data[i].index}`).addClass('red_hex');
+			    			break;
+			    		}
+			    	}
+		    	}
+		  	});}
+		  	
+		  	function getDataShluz(){
+			$.ajax({
+			    type: 'GET',
+			    url: '../js/bdh.php',
+			    dataType: "json",
+			    success: function(data){
+
+			    	for(var i in data){
+			    		switch(data[i].status){
+			    			case 'opened':
+			    			$(`#sh${data[i].index}`).addClass('opened');
+			    			break;
+			    			case 'closed':
+			    			$(`#sh${data[i].index}`).removeClass('opened');
 			    			break;
 			    		}
 			    	}
