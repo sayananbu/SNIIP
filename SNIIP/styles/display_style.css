@@ -178,6 +178,7 @@ body{
 	background-color: red;
 	border-radius: 50%;
 	border: 10px solid #000;
+	transition: .4s;
 }
 .shluz_arrow{
 	width: 60px;
@@ -214,6 +215,10 @@ body{
     margin:27px 6px;
     text-align:center;
     zoom:1;
+    transition: .4s;
+}
+.slow{
+	transition: .4s;
 }
 
     .hex.hex-gap {

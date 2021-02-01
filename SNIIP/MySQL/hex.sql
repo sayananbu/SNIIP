@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 31, 2021 at 10:19 PM
+-- Generation Time: Feb 01, 2021 at 09:35 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -53,12 +53,19 @@ INSERT INTO `hex_status` (`id`, `index`, `status`) VALUES
 (25, 113, 'inactive'),
 (20, 103, 'inactive'),
 (21, 11, 'inactive'),
+(33, 86, 'inactive'),
 (22, 43, 'inactive'),
 (23, 114, 'inactive'),
+(29, 12, 'inactive'),
 (24, 76, 'inactive'),
 (26, 51, 'inactive'),
 (27, 107, 'inactive'),
-(28, 111, 'inactive');
+(28, 111, 'inactive'),
+(30, 13, 'inactive'),
+(31, 52, 'inactive'),
+(32, 89, 'inactive'),
+(34, 47, 'inactive'),
+(35, 36, 'inactive');
 
 -- --------------------------------------------------------
 
@@ -77,10 +84,12 @@ CREATE TABLE `shluz_status` (
 --
 
 INSERT INTO `shluz_status` (`id`, `index`, `status`) VALUES
-(1, 1, 'opened'),
+(1, 1, 'closed'),
 (3, 2, 'opened'),
 (4, 7, 'opened'),
-(5, 4, 'opened');
+(5, 4, 'opened'),
+(6, 9, 'closed'),
+(7, 8, 'closed');
 
 --
 -- Indexes for dumped tables
@@ -108,13 +117,13 @@ ALTER TABLE `shluz_status`
 -- AUTO_INCREMENT for table `hex_status`
 --
 ALTER TABLE `hex_status`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `shluz_status`
 --
 ALTER TABLE `shluz_status`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

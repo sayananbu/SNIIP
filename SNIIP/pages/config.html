@@ -617,6 +617,7 @@
 				
 
 				<button id="btnHex" class="border butt">Save</button>
+				<button id="btnReset" class="border padd">Reset</button>
 				</div>
 			</fieldset></div>
 		<!-- </form> -->
@@ -629,78 +630,79 @@
 						<legend class="upper_text">Настройка шлюзов</legend>
 							<div class="config_list-item">
 								<label for="conf" class="label">Шлюз 1: 
-									<select class="select" value='1' id="select1" >
+									<select class="select gateway" value='1' id="Sselect1" >
 										<option value="">Выберите опцию</option>
 										<option value="opened">Открыть</option>
-										<option value="close">Закрыть</option>
+										<option value="closed">Закрыть</option>
 									</select></label>
 							</div>
 							<div class="config_list-item">
 								<label for="conf" class="label">Шлюз 2: 
-									<select class="select" value='2' id="select1" >
+									<select class="select gateway" value='2' id="Sselect2" >
 										<option value="">Выберите опцию</option>
 										<option value="opened">Открыть</option>
-										<option value="close">Закрыть</option>
+										<option value="closed">Закрыть</option>
 									</select></label>
 							</div>
 							<div class="config_list-item">
 								<label for="conf" class="label">Шлюз 3: 
-									<select class="select" value='3' id="select1" >
+									<select class="select gateway" value='3' id="Sselect3" >
 										<option value="">Выберите опцию</option>
 										<option value="opened">Открыть</option>
-										<option value="close">Закрыть</option>
+										<option value="closed">Закрыть</option>
 									</select></label>
 							</div>
 							<div class="config_list-item">
 								<label for="conf" class="label">Шлюз 4: 
-									<select class="select" value='4' id="select1" >
+									<select class="select gateway" value='4' id="Sselect4" >
 										<option value="">Выберите опцию</option>
 										<option value="opened">Открыть</option>
-										<option value="close">Закрыть</option>
+										<option value="closed">Закрыть</option>
 									</select></label>
 							</div>
 							<div class="config_list-item">
 								<label for="conf" class="label">Шлюз 5: 
-									<select class="select" value='5' id="select1" >
+									<select class="select gateway" value='5' id="Sselect5" >
 										<option value="">Выберите опцию</option>
 										<option value="opened">Открыть</option>
-										<option value="close">Закрыть</option>
+										<option value="closed">Закрыть</option>
 									</select></label>
 							</div>
 							<div class="config_list-item">
 								<label for="conf" class="label">Шлюз 6: 
-									<select class="select" value='6' id="select1" >
+									<select class="select gateway" value='6' id="Sselect6" >
 										<option value="">Выберите опцию</option>
 										<option value="opened">Открыть</option>
-										<option value="close">Закрыть</option>
+										<option value="closed">Закрыть</option>
 									</select></label>
 							</div>
 							<div class="config_list-item">
 								<label for="conf" class="label">Шлюз 7: 
-									<select class="select" value='7' id="select1" >
+									<select class="select gateway" value='7' id="Sselect7" >
 										<option value="">Выберите опцию</option>
 										<option value="opened">Открыть</option>
-										<option value="close">Закрыть</option>
+										<option value="closed">Закрыть</option>
 									</select></label>
 							</div>
 							<div class="config_list-item">
 								<label for="conf" class="label">Шлюз 8: 
-									<select class="select" value='8' id="select1" >
+									<select class="select gateway" value='8' id="Sselect8" >
 										<option value="">Выберите опцию</option>
 										<option value="opened">Открыть</option>
-										<option value="close">Закрыть</option>
+										<option value="closed">Закрыть</option>
 									</select></label>
 							</div>
 							<div class="config_list-item">
 								<label for="conf" class="label">Шлюз 9: 
-									<select class="select" value='9' id="select1" >
+									<select class="select gateway" value='9' id="Sselect9" >
 										<option value="">Выберите опцию</option>
 										<option value="opened">Открыть</option>
-										<option value="close">Закрыть</option>
+										<option value="closed">Закрыть</option>
 									</select></label>
 							</div>
 							
 							<button id="btnShluz" class="border butt">Save</button>
+							<button id="btnResetSluz" class="border padd">Reset</button>
 							</div>
 				</fieldset></div>
 				<!-- </form> -->
@@ -722,14 +724,16 @@
 				91,92,93,94,95,96,97,98,
 				101,102,103,104,105,106,107,
 				111,112,113,114];
-//console.log(arr[1]+" "+typeof(arr[1]));
+//console.log($('.gateway').length);
 			var sel1;
 			var in1;
+			var gate1;
 			getData();
 			getDataShluz();
 			setInterval(getData, 5000);
 			setInterval(getDataShluz, 7000);
 		
+
 
 		function getDataShluz(){
 			$.ajax({
@@ -808,20 +812,37 @@
 				
 			});
 
-		// 	function isValid(inp){
-		// 	var inArray=false;
-		// 	for(var i=0;i<arr.length;i++){
-		// 		var mas=arr[i].toString();
-		// 				if(mas==inp){
-		// 					inArray=true;
-		// 					break;
-		// 				}
-		// 			}
-		// 			if(inArray==true){
-		// 				return true;
-		// 			}else{ return false};
-		// }
+			$('#btnShluz').click(function() {
+				for (var i = 1; i <= $('.gateway').length; i++) {
+					var ind=i;
+					gate=$(`#Sselect${i}`).val();
+					if (gate=="") {
+						continue;
+					}
+					//console.log(ind+" "+gate);
+					$.post('../js/bdh_insert.php',
+				 {index: `${ind}`,
+				 status:`${gate}`
+				}, 
+				 function(data) {
+					console.log(data);
+				});
 
+				}
+			});
+
+			$('#btnReset').click(function() {
+				for (var i = 1; i <= $('.hexes').length; i++) {
+					$(`#input${i}`).val("");
+					$(`#select${i}`).val("");
+				}
+			});
+
+			$('#btnResetSluz').click(function() {
+				for (var i = 1; i <= $('.gateway').length; i++) {
+					$(`#Sselect${i}`).val("");
+				}
+			});
 		})
 		
 
